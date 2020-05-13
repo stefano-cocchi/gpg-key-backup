@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 set -ex
 
-DEVICE_NAME=$1
-KEY_FINGERPRINT=$2
-
-if [ -z "$DEVICE_NAME" ]; then
-    >&2 echo "Device name is missing!"
-    >&2 echo "Usage: $0 <device name> <key fingerprint>"
-    exit 1
-fi
+KEY_FINGERPRINT=$1
+DEVICE_NAME=$2
 
 if [ -z "$KEY_FINGERPRINT" ]; then
     >&2 echo "Key fingerprint is missing!"
-    >&2 echo "Usage: $0 <device name> <key fingerprint>"
+    >&2 echo "Usage: $0 <key fingerprint> <device name>"
+    exit 1
+fi
+
+if [ -z "$DEVICE_NAME" ]; then
+    >&2 echo "Device name is missing!"
+    >&2 echo "Usage: $0 <key fingerprint> <device name>"
     exit 1
 fi
 
