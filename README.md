@@ -3,11 +3,11 @@ Backup GPG private keys to storage devices
 ## Usage
 ### Backup a key
 ```
-./backupkey.sh <device name> <key fingerprint>
+./backupkey.sh <key fingerprint> <devicename>
 ```
 ### Restore a key from backup
 ```
-./restorekey.sh <device name> <key fingerprint>
+./restorekey.sh <device name>
 ```
 ### Environment Variables
 Name | Default value | Description
